@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #timeDisplay {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    var timerId; // Variable to hold the timer ID
+
+    // Function to display the current time
+    function showTime() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+
+      // Add leading zeros if necessary
+      minutes = (minutes < 10 ? "0" : "") + minutes;
+      seconds = (seconds < 10 ? "0" : "") + seconds;
+
+      var timeString = hours + ":" + minutes + ":" + seconds;
+
+      document.getElementById('timeDisplay').innerHTML = timeString;
+    }
+
+    // Function to start the timer
+    function startTimer() {
+      timerId = setInterval(showTime, 1000); // Call showTime every 1000 milliseconds (1 second)
+    }
+
+    // Function to stop the timer
+    function stopTimer() {
+      clearInterval(timerId); // Stop the timer
+    }
+  </script>
+</head>
+<body>
+  <h1>Time Display</h1>
+  <div id="timeDisplay">Current time will be displayed here.</div>
+  <button onclick="startTimer()">Start Time</button>
+  <button onclick="stopTimer()">Stop Time</button>
+</body>
+</html>
+
+
+ 
