@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form autocomplete="off">
+        <input type="text" id="one">
+        <input type="password" id="two">
+        <select type="subjects" id="three">
+        <option value="OS">OS</option>
+        <option value="dsa">Dsa</option>
+        <option value="daku">daku</option>
+        </select> 
+        
+        <button type="submit" id="four">Submit</button>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#one,#two").focus(function(){
+                $("#one,#two").css("backgroundColor","yellow");
+            });
+        })
+        $(document).select(function(){
+            $("#one").focus(function(){
+                $("#one").css("backgroundColor","pink");
+            });
+        })
+        $(document).change(function(){
+            $("#three").focus(function(){
+                $("#three").css("backgroundColor","blue");
+            });
+        })
+        var parent=document.querySelector('#four');
+        parent.addEventListener('click',function(){
+            console.log("1/n",1);
+        });
+        let pattern=" ";
+        for(let i=0;i<=5;i++){
+            pattern+=i;
+            console.log(pattern);
+        }
+    </script>
+</body>
+</html>
