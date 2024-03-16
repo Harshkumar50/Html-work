@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            name: "Harsh",
+            regNo: "12216221",
+            currentAttendance: 84,
+            subjects: {
+                "DBMS": ["Calculus", "Prof.goblin"],
+                "OS": ["Mechanics", "Dr.Neyo"],
+                "JAVA": ["Data Structures", "prof.Ninja"]
+                
+            }
+        };
+        
+        
+        for (let subject in student.subjects) {
+            let teacherName = student.subjects[subject][1];
+            console.log(`${subject}: ${teacherName}`);
+            document.write(`${subject}: ${teacherName}`)
+        }
+        
+    </script>
+</body>
+</html> 
