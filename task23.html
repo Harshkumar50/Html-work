@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+</head>
+<body>
+    <div id="projectDetails"></div>
+
+    <script>
+        // Define the array representing the project
+        let semesterProject = ["OS Project", "Task 1", "Task 2", "Task 3", "Task 4"];
+
+        // Check if the element at 0th location is "OS"
+        if (semesterProject[0] === "OS") {
+            // Replace it with "DBMS"
+            semesterProject[0] = "DBMS";
+        }
+
+        // Display the 0th element on the webpage
+        document.getElementById("projectDetails").innerText = "Project Title: " + semesterProject[0];
+    </script>
+</body>
+</html>
