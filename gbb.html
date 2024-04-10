@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class stringbuilder {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("harsh");
+        System.out.println(sb);
+        System.out.println(sb.charAt(0));
+        // we can also set any char at any index
+        sb.setCharAt(0, 'm');
+        System.out.println(sb);
+        // by using of insert function any char can be added
+        sb.insert(1, 'a');
+        System.out.println(sb);
+        // for delete we use delete function
+        sb.delete(2, 4);
+        System.out.println(sb);
+        // append = used to add char in last
+        // .length = used to calculate length of string
+        sb.append("a");
+        System.out.println(sb);
+        //
+    }
+}
