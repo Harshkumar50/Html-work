@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunflower</title>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+        .center {
+            fill: orange; /* Color for the center */
+        }
+    </style>
+</head>
+<body>
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Draw sunflower center -->
+        <circle cx="100" cy="100" r="20" class="center" />
+        
+        <!-- Draw sunflower petals -->
+        <g transform="rotate(0 100 100)">
+            <ellipse cx="100" cy="100" rx="50" ry="20" fill="yellow" />
+        </g>
+        <g transform="rotate(60 100 100)">
+            <ellipse cx="100" cy="100" rx="50" ry="20" fill="yellow" />
+        </g>
+        <g transform="rotate(120 100 100)">
+            <ellipse cx="100" cy="100" rx="50" ry="20" fill="yellow" />
+        </g>
+        <g transform="rotate(180 100 100)">
+            <ellipse cx="100" cy="100" rx="50" ry="20" fill="yellow" />
+        </g>
+        <g transform="rotate(240 100 100)">
+            <ellipse cx="100" cy="100" rx="50" ry="20" fill="yellow" />
+        </g>
+        <g transform="rotate(300 100 100)">
+            <ellipse cx="100" cy="100" rx="50" ry="20" fill="yellow" />
+        </g>
+    </svg>
+</body>
+</html>
